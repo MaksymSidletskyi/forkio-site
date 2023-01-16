@@ -1,0 +1,347 @@
+@import './variables.scss';
+@import './reset.scss';
+@import './fonts.scss';
+@import './mixins.scss';
+
+.container {
+    padding: 0 10px;
+}
+
+.header {
+    background-image: url("../img/images/header-image.png");
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+
+
+    
+    @media (min-width: 1200px) {
+        margin: 0 auto;
+      }
+  
+
+    &__wrapper {
+        margin: 0 auto;
+        @include flex-juctify(space-between);
+        padding: 30px 90px;
+
+        @media (max-width: 992px) {
+            background-color: $header-fork-background-color;
+            padding-bottom: 50px;
+            
+        }
+
+
+
+        &-main {
+            @include flex-align(center);
+            text-decoration: none;
+
+            &-logo {
+                @media (max-width: 480px) {
+                    position: absolute;
+                    left: 10%;                 
+                }
+            }
+
+            &-text {
+                color: $main-text-color;
+                font-size: $fs-m;
+                margin-left: 17px;
+                text-transform: uppercase;
+                font-family: LatoBold;
+
+                @media (max-width: 480px) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__fork {
+
+        margin-top: 125px;
+        text-align: center;
+
+        @media (max-width: 480px) {
+            padding: 0px 10px;
+        }
+
+        &-title {
+
+            color: $main-second-text-color;
+            font-size: $fs-xxxl;
+            font-family: MontserratBold;
+
+            @media (min-width: 481px) and (max-width: 992px) {
+                font-size: $adap-fs-xxl;
+            }
+
+            @media (max-width: 480px) {
+                font-size: $fs-xl;
+            }
+        }
+
+        &-text {
+            color: $main-text-color;
+            font-size: $fs-l;
+            margin-top: 20px;
+            font-family: LatoRegular;
+
+            @media (min-width: 481px) and (max-width: 992px) {
+                font-size: $fs-m;
+            }
+
+            @media (max-width: 480px) {
+                font-size: $adap-fs-xxs;
+                text-transform: capitalize;
+            }
+        }
+
+        &-description {
+            color: $description-text-color;
+            font-size: $fs-xs;
+            margin-top: 20px;
+            font-family: MontserratRegular;
+
+
+            @media (min-width: 481px) and (max-width: 992px) {
+                font-size: $fs-xxs;
+            }
+
+
+        }
+    }
+}
+
+.header__wrapper-main:hover img {
+    content: url('../img/images/Logo-hover.svg');
+}
+    
+.header__wrapper-main:hover p {
+    color: $main-second-text-color;
+}
+
+.nav {
+    @include flex-align(center);
+
+    &__list {
+        display: flex;
+
+        @media (min-width: 481px) and (max-width: 992px) {
+            position: absolute;
+            left: 15%;
+            top: 90px;
+        } 
+
+        @media (max-width: 480px) {
+            position: absolute;
+            display: block;
+            background-color: $editor-button-text-color;
+            width: 285px;
+            top: 117PX;
+            padding-bottom: 14px;
+            left: 6%;
+            display: none;
+            
+        }
+
+        
+
+        &-item {
+            margin-right: 50px;
+
+            @media (max-width: 480px) {
+                border-bottom: 3px solid $header-burger-line;
+                margin: 0 auto;
+                padding: 23px 0px;
+                display: block;
+            }
+        }
+
+        &-link {
+            text-decoration: none;
+            color: $main-text-color;
+            font-size: $fs-xs;
+            font-family: MontserratBold;
+
+            @media (max-width: 480px) {
+                display: block;
+                font-size: $adap-fs-xs;
+                text-align: left;
+                padding-left: 30px;
+                color: $main-second-text-color;
+
+                // padding-bottom: 23px;
+                // text-align: left;
+                // padding-left: 30px;
+                // margin-top: 30px;
+                // color: $main-second-text-color;
+
+                
+
+            }
+        
+        }
+
+        &-link:hover {
+            color: $main-second-text-color;
+        }
+    }
+}
+
+.nav__list-link:active {
+    border-left: 8px solid rgba(141, 129, 172, 1);
+    line-height: 53px;               
+    color: $main-text-color;
+
+}
+
+
+
+
+.menu__mobile {
+    @include flex(center, center);
+    position: absolute;
+    right: 35px;
+    top: 40px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+
+    &-hr {
+
+      @include menu-hr;
+      width: 15px;
+      &::after,
+      &::before {
+        display: block;
+        content: '';
+        @include menu-hr
+      }
+      &::before {
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+    }
+  
+    @media (min-width: 481px) {
+      display: none;
+    }
+  }
+
+
+  .close {
+    position: absolute;
+    top: 0px;
+    width: 32px;
+    height: 32px;
+  }
+  .close:hover {
+    opacity: 1;
+  }
+  .close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 30px;
+    width: 2px;
+    background-color: $main-second-text-color;
+  
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+  
+  
+
+.buy-button {
+    background-color: $main-text-color;
+    color: $main-second-text-color;
+    padding: 11px 20px;
+    @include flex(flex-end, center);
+    border-radius: 40px;
+    border: none;
+    font-family: MontserratBold;
+
+    @media (max-width: 480px) {
+        margin: auto;
+        margin-right: 20px;
+        padding: 11px 10px;
+    }
+
+}
+
+.buy-button-text {
+    width: 105px;
+}
+
+.buy-button:hover {
+    background-color: $main-second-text-color;
+    color: $main-text-color;
+}
+
+
+.download {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    top: 65px;
+    margin-top: 450px;
+
+    &__button {
+        margin: 0 auto;
+        display: block;
+        background-color: $main-text-color;
+        padding: 20px 60px;
+        border-radius: 40px;
+        color: $main-second-text-color;
+        font-size: $fs-s;
+        line-height: 22px;
+        font-family: MontserratBold;
+        border: 2px solid $main-text-color;
+
+
+        @media (max-width: 480px) {
+            padding: 13px 29px;
+            font-size: $adap-fs-xxs;
+            
+        }
+    }
+
+    &__button:hover {
+        background-color: $main-second-text-color;
+        color: $main-text-color;
+        
+    }
+
+
+    .nav__list.active {
+        top: 100px;
+      }
+      
+
+    &__info {
+        text-align: center;
+        font-size: $fs-xxs;
+        color: $description-text-color;
+        margin-top: 20px;
+        font-family: MontserratRegular;
+    }
+
+}
+
+.active {
+    display: inline-block;
+}
+
+
+
+
+

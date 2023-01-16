@@ -1,0 +1,143 @@
+@import './reset.scss';
+@import './variables.scss';
+@import './fonts.scss';
+
+
+
+  
+.feedback-bg {
+    background-image: url("../img/images/feedback-bg.png");
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.feedback {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 125px;
+    row-gap: 107px;
+
+
+
+    &-title {
+
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: $fs-xl;
+    line-height: 1.6;
+    color: $main-second-text-color;
+    text-align: center;
+    padding: 90px 0px;
+
+    @media (min-width: 481px) and (max-width: 992px) {
+        font-size: $adap-fs-xl;
+    }
+
+    @media (min-width: 320px) and (max-width: 480px) {
+        font-size: $adap-fs-l;
+    }
+
+    }
+
+    &__img {
+        text-align: center;
+    }
+
+    &__text {
+        text-align: center;
+        font-family: BoldItalic;
+        color: $main-second-text-color;
+        font-size: $fs-xs;
+        line-height: 24px; 
+    }
+
+    &-footer {
+        font-size: $fs-xxs;
+        color: $description-second-text-color;
+        margin: 0 auto;
+        text-align: center;
+        max-width: 887px;
+        padding-top: 70px;
+        line-height: 21px;
+        font-family: LatoRegular;
+    
+        @media (min-width: 481px) and (max-width: 992px) {
+            max-width: 705px;
+        }
+    
+        @media (max-width: 480px) {
+            max-width: 251px;
+        }
+    }
+
+
+    &-hr {
+        margin: 20px auto;
+        max-width: 780px;
+        height: 2px;
+        background-color: $main-second-text-color;
+        
+    
+        @media (min-width: 481px) and (max-width: 992px) {
+         max-width: 555px;   
+        }
+    
+        @media (max-width: 480px) {
+            max-width: 245px;
+        }  
+    }
+}
+
+
+
+
+.feedback__smashing {
+    margin-top: 33px;
+}
+
+.feedback__codrops,
+.feedback__creative {
+    margin-top: 29px;
+}
+
+.feedback__w {
+    margin-top: 22px;
+}
+
+.feedback__tnw {
+    margin-top: 30px;
+}
+
+.feedback__pixel {
+    margin-top: 33px;
+}
+
+
+
+@media (min-width: 481px) and (max-width: 992px) {
+    .feedback {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 90px;
+        row-gap: 55px;
+        padding: 0 18px;
+    }
+
+    .feedback__pixel {
+        margin-top: 45px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .feedback {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 41px;
+        padding: 0 16px;
+
+    }
+}

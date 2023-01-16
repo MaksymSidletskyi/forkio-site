@@ -1,0 +1,195 @@
+.cards-caption {
+    width: 650px;
+    color: $main-second-text-color;
+    font-family: MontserratBold;
+    font-size: $fs-xl;
+    margin: auto;
+    padding-top: 112px;
+}
+
+.subscription-cards {
+    max-width: 1200px;
+    margin: auto;
+    @include flex-align(center);
+    padding: 61px 43px 73px 43px;
+    gap: 15px;
+}
+
+.cards-wrapper,
+.cards-wrapper-second {
+    @include flex-align(center);
+    gap: 15px;
+}
+
+.card-wrapper {
+    width: 256px;
+    background-color: $background-subscription-color;
+
+    &__item {
+        background-color: $header-background-color;
+    }
+
+    &__item_three {
+        background-color: $background-subscription-second-color;
+    }
+
+    &__description {
+        font-family: MontserratRegular;
+        font-size: $fs-m;
+        text-transform: uppercase;
+        color: $main-second-text-color;
+        padding: 36px 0;
+        text-align: center;
+    }
+
+    &__description_three {
+        padding: 43px 0;
+    }
+
+
+    &__price {
+        font-family: MontserratBold;
+        font-size: $price-xl;
+        color: $main-second-text-color;
+        padding-top: 30px;
+    }
+    &__price_three {
+        padding-top: 14px;
+        font-size: $fs-xxxl;
+    }
+    
+    &__month {
+        color: $main-second-text-color;
+        font-family: MontserratRegular;
+        font-size: $fs-xxs;
+        padding-top: 20px;
+        text-transform: uppercase;
+    }
+
+    &__price_three {
+        padding-top: $fs-xs;
+    }
+
+    &__subtitle {
+        color: $main-second-text-color;
+        font-family: MontserratRegular;
+        font-size: $fs-xs;
+        text-align: center;
+        padding: 30px 16px 0;
+    }
+    
+    &__subtitle-one {
+        padding-top: 36px;
+    }
+    
+    &__subtitle-three {
+        padding-top: 40px;
+    }
+
+    &__middle {
+        @include flex-direction(column, center);
+    }
+}
+
+.card-wrapper__three {
+    width: 299px;
+    background-color: $header-background-second-color;
+}
+
+.dollar {
+    font-family: MontserratRegular;
+}
+
+.line {
+    background-color: $line-color;
+    width: 60px;
+    height: 5px;
+    margin-top: 38px;
+}
+
+.line-three {
+    margin-top: 46px;
+}
+
+.button {
+    width: 160px;
+    height: 42px;
+    background-color: $background-subscription-button-color;
+    font-family: MontserratRegular;
+    text-transform: uppercase;
+    font-size: $fs-xs;
+    border-radius: 25px;
+    @include flex(center, center); 
+    margin: auto;
+    color: $main-second-text-color;
+    cursor: pointer;
+}
+
+.btn-one {
+    margin-top: 64px;
+    margin-bottom: 37px;
+}
+
+.btn-two {
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+
+.btn-three {
+    margin-top: 83px;
+    margin-bottom: 47px;
+}
+
+.btn-four {
+    margin-top: 38px;
+    margin-bottom: 40px;
+}
+
+
+
+
+
+
+@media (min-width: 481px) and (max-width: 992px) {
+
+    .cards-caption {
+        font-size: $adap-fs-xl;
+        width: 562px;
+        padding-top: 90px;
+    }
+
+    .subscription-cards {
+        flex-direction: column;
+    }
+
+    .cards-wrapper {
+        padding: 0 108px 0 121px;
+    }
+
+    .cards-wrapper-second {
+        padding: 0 109px 0 79px;
+        margin-top: 30px;
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .cards-caption {
+        font-size: $adap-fs-s;
+        width: 320px;
+        padding-top: 2px;
+        text-align: center;
+    }
+
+    .subscription-cards {
+        flex-direction: column;
+    }
+
+    .cards-wrapper {
+        flex-direction: column;
+    }
+
+    .cards-wrapper-second {
+        flex-direction: column;
+    }
+}

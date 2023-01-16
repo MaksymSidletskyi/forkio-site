@@ -1,0 +1,39 @@
+@mixin menu-hr {
+  float: right;
+  width: 26px;
+  border-top: 3px solid $main-second-text-color;
+  border-radius: 2px;
+}
+
+@mixin flex-juctify($justify-content) {
+  display: flex;
+  justify-content: $justify-content;
+}
+
+@mixin flex-align($align-items) {
+  display: flex;
+  align-items: $align-items;
+}
+
+@mixin flex($justify-content, $align-items) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin flex-direction($flex-direction, $align-items) {
+  display: flex;
+  flex-direction: $flex-direction;
+  align-items: $align-items;
+}
+@mixin direction($flex-direction) {
+  display: flex;
+  flex-direction: $flex-direction;
+}
+
+@mixin flex-self($flex-direction, $justify-self) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-self: $justify-self;
+}
+
